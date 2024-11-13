@@ -1,0 +1,13 @@
+Source: rpi-trace-boot
+Section: utils
+Priority: optional
+Maintainer: Richard Oliver <richard.oliver@raspberrypi.com>
+Standards-Version: 4.3.0
+Vcs-Git: git://git@github.com:raspberrypi/rpi-trace-boot.git
+Vcs-Browser: https://github.com/raspberrypi/rpi-trace-boot
+
+Package: rpi-trace-boot
+Architecture: all
+Depends: ${misc:Depends}, perfetto
+Enhances: rpi-analyse-boot
+Description: A tool to capture perfetto traces at boot

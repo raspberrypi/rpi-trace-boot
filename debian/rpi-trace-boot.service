@@ -1,0 +1,19 @@
+[Unit]
+Description=Record trace from early boot
+DefaultDependencies=no
+After=sys-kernel-tracing.mount
+Before=local-fs-pre.target rpi-trace-boot-quit.service
+Wants=local-fs-pre.target
+
+[Service]
+ExecStart=/usr/sbin/rpi-trace-boot
+EnvironmentFile=/etc/rpi-trace-boot/rpi-trace-boot.conf
+Type=forking
+PIDFile=%n/tracebox.pid
+KillSignal=SIGTERM
+KillMode=process
+RuntimeDirectory=%n
+RuntimeDirectoryPreserve=yes
+
+[Install]
+WantedBy=sysinit.target

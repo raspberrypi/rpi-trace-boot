@@ -1,0 +1,20 @@
+#!/bin/sh
+
+set -e
+
+SERVICE_NAME="$(basename $0)"
+RUNTIME_DIRECTORY="${RUNTIME_DIRECTORY:=/run/${SERVICE_NAME}.service}"
+mkdir -p "${RUNTIME_DIRECTORY}"
+TRACE_FILE="${RUNTIME_DIRECTORY}/trace"
+
+BUFFER_SIZE="${BUFFER_SIZE:=256mb}"
+
+/usr/sbin/tracebox \
+	--background \
+	--buffer="${BUFFER_SIZE}" \
+	--time=1h \
+	--out "${TRACE_FILE}" \
+	'sched/*' \
+	'raw_syscalls/*' \
+	${ADDITIONAL_FTRACE_EVENTS} \
+		> "${RUNTIME_DIRECTORY}"/tracebox.pid

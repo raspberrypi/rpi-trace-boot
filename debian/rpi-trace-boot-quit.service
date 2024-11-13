@@ -1,0 +1,13 @@
+[Unit]
+Description=Terminate boot trace capture
+After=default.target graphical.target multi-user.target
+Before=boot-complete.target
+After=rpi-trace-boot.service
+
+[Service]
+Type=oneshot
+RemainAfterExit=true
+ExecStart=/usr/bin/systemctl stop rpi-trace-boot.service
+
+[Install]
+WantedBy=default.target

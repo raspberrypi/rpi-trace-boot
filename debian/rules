@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+override_dh_installsystemd:
+	dh_installsystemd --no-start --no-stop-on-upgrade
+	dh_installsystemd --no-start --no-stop-on-upgrade --name=rpi-trace-boot-quit
+
+%:
+	dh $@ --with-systemd
