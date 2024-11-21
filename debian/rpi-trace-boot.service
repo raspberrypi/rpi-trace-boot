@@ -4,6 +4,7 @@ DefaultDependencies=no
 After=sys-kernel-tracing.mount
 Before=local-fs-pre.target rpi-trace-boot-quit.service
 Wants=local-fs-pre.target
+AssertFileIsExecutable=/usr/sbin/tracebox
 
 [Service]
 ExecStart=/usr/sbin/rpi-trace-boot
