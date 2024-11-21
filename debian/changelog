@@ -1,3 +1,10 @@
+rpi-trace-boot (20241121) bookworm; urgency=medium
+
+  * rpi-trace-boot.service: Assert tracebox available
+  * Add rpi-trace-boot.service(8) man page
+
+ -- Richard Oliver <richard.oliver@raspberrypi.com>  Thu, 21 Nov 2024 16:21:04 +0000
+
 rpi-trace-boot (20241120) bookworm; urgency=medium
 
   * rpi-trace-boot: Initial release
