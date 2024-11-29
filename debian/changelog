@@ -1,3 +1,12 @@
+rpi-trace-boot (20241129) bookworm; urgency=medium
+
+  * debian: Improve rules to generate/clean man pages
+  * debian/copyright: Ensure machine-readable
+  * gitignore: Generated Debian packaging files
+  * README: git-buildpackage instructions
+
+ -- Richard Oliver <richard.oliver@raspberrypi.com>  Fri, 29 Nov 2024 11:33:35 +0000
+
 rpi-trace-boot (20241121) bookworm; urgency=medium
 
   * rpi-trace-boot.service: Assert tracebox available
