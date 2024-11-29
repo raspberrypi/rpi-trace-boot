@@ -36,6 +36,6 @@ ADDITIONAL_FTRACE_EVENTS=printk:console rcu/*
 
 On Raspberry Pi OS:
 ```
-dpkg-buildpackage -uc -us
+gbp buildpackage --git-debian-branch=main -uc -us
 sudo dpkg -i ../rpi-trace-boot_<version>_all.deb
 ```
