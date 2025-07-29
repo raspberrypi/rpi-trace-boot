@@ -1,2 +1,2 @@
-rpi-trace-boot /usr/sbin
+rpi-trace-boot /usr/share/rpi-trace-boot/bin
 etc/
