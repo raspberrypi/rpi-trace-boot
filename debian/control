@@ -2,7 +2,7 @@ Source: rpi-trace-boot
 Section: utils
 Priority: optional
 Maintainer: Richard Oliver <richard.oliver@raspberrypi.com>
-Build-Depends: pandoc
+Build-Depends: debhelper-compat (= 13), pandoc
 Standards-Version: 4.3.0
 Vcs-Git: git://git@github.com:raspberrypi/rpi-trace-boot.git
 Vcs-Browser: https://github.com/raspberrypi/rpi-trace-boot
