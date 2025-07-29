@@ -11,4 +11,17 @@ Package: rpi-trace-boot
 Architecture: all
 Depends: ${misc:Depends}, perfetto
 Enhances: rpi-analyse-boot
-Description: A tool to capture perfetto traces at boot
+Description: Tool to capture perfetto traces at boot
+ The Raspberry Pi Boot Trace Service automatically collects highly detailed
+ trace information during system boot. Perfetto's tracebox tool is started
+ during boot to capture scheduling and syscall information; tracebox is
+ stopped following boot-complete.
+ .
+ Once installed, you simply need to restart your device to capture a boot
+ trace. The trace is available at /run/rpi-trace-boot.service/trace and can
+ be inspected using the Perfetto UI Tool. Alternatively, the boot trace can
+ be accessed via the boot analysis report if rpi-analyse-boot has been
+ installed.
+ .
+ Additional ftrace events may be configured via the configuration file at
+ /etc/rpi-trace-boot/rpi-trace-boot.conf.
