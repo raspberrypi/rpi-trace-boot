@@ -9,4 +9,4 @@ execute_before_dh_install:
 		--output=debian/rpi-trace-boot.service.8
 
 %:
-	dh $@ --with-systemd
+	dh $@
