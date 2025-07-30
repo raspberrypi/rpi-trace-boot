@@ -1,3 +1,16 @@
+rpi-trace-boot (20250730) trixie; urgency=medium
+
+  * Add salsa-ci.yml
+  * debian: Add extended description
+  * Move rpi-trace-boot to /usr/share
+  * debian: Specify compat as Build-Depends
+  * debian: add source/format
+  * debian: Use Standards-Version 4.7.2
+  * debian: Copyright date/formatting
+  * debian: Remove deprecated --with-systemd
+
+ -- Richard Oliver <richard.oliver@raspberrypi.com>  Wed, 30 Jul 2025 10:02:52 +0100
+
 rpi-trace-boot (20241129) bookworm; urgency=medium
 
   * debian: Improve rules to generate/clean man pages
